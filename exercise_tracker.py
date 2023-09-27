@@ -10,10 +10,11 @@ WEIGHT_KG = os.getenv("WEIGHT_KG")
 HEIGHT_CM = os.getenv("HEIGHT_CM")
 AGE = os.getenv("AGE")
 
-EXERCISE_APP_ID = os.getenv("EXERCISE_APP_ID")
-EXERCISE_API_KEY = os.getenv("EXERCISE_API_KEY")
+NUTRITIONIX_APP_ID = os.getenv("NUTRITIONIX_APP_ID")
+NUTRITIONIX_API_KEY = os.getenv("NUTRITIONIX_API_KEY")
 SHEETY_AUTH_TOKEN = os.getenv("SHEETY_AUTH_TOKEN")
 SHEETY_ENDPOINT = os.getenv("SHEETY_ENDPOINT")
+G_SPREADSHEET_LINK = os.getenv("G_SPREADSHEET_LINK")
 
 
 # -----------------GET EXERCISE STATS-----------------
@@ -22,8 +23,8 @@ exercise_endpoint = "https://trackapi.nutritionix.com/v2/natural/exercise"
 exercise_prompt = input("Tell me which exercises you did: ")        # Example: "I ran 5km for 30 min"
 
 exercise_headers = {
-    "x-app-id": EXERCISE_APP_ID,
-    "x-app-key": EXERCISE_API_KEY
+    "x-app-id": NUTRITIONIX_APP_ID,
+    "x-app-key": NUTRITIONIX_API_KEY
 }
 exercise_body = {
     "query": exercise_prompt,
@@ -71,6 +72,7 @@ sheety_headers = {
 sheety_response = requests.post(url=post_sheety_endpoint, json=sheety_body, headers=sheety_headers)
 print(sheety_response)
 print(sheety_response.json())
+print(f"Click here for the spreadsheet: {G_SPREADSHEET_LINK}")
 
 # -----------------PUT ROW-----------------
 

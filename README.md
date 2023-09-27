@@ -17,31 +17,40 @@ For detailed information on the Nutritionix APIs used in this project, refer to 
 
 ## Requirements
 
-- Python 3.x
-- Nutritionix API Key
-- Sheety API Key
+- [Python 3.x]()
+- [Nutritionix API](https://developer.nutritionix.com/docs) Key
+- [Sheety API](https://sheety.co/) Key
+- [Google spreadsheet](https://docs.google.com/spreadsheets/create)
 
 ## Installation
 
 1. Clone or download the repository to your local machine.
 2. Ensure you have Python 3.x installed on your system.
-3. Sign up for a Nutritionix API Key and a Sheety API Key.
-4. Create a `config.py` file with your API keys. Use the `config_template.py` as a template.
+3. Sign up for a [Nutritionix API](https://developer.nutritionix.com/docs) Key and a [Sheety API](https://sheety.co/) Key.
+4. Create a `.env` file your with your API keys to store your environment variables.
+Refer [python-dotenv](https://pypi.org/project/python-dotenv/) to setup env variables.
 
 ## Usage
 
-1. Open the `config.py` file and replace the placeholder values with your Nutritionix and Sheety API keys.
+1. Open the setup `.env` file.
 2. Run the `exercise_tracker.py` file.
-3. Follow the prompts to input your exercise details.
+3. Follow the prompts to input your exercise details. You can type in as you would type to a chat bot.
+Example: *I ran 5 km for 30 min*
+4. The script will respond, calculating your calories and other data as well and populate the spreadsheet.
 
 ## Configuration
 
-You can customize the following parameters in `config.py`:
+Configure env variables in `.env`:
 
 - `NUTRITIONIX_APP_ID`: Your Nutritionix application ID.
 - `NUTRITIONIX_API_KEY`: Your Nutritionix API key.
+- `SHEETY_AUTH_TOKEN`: Your Sheety API token.
 - `SHEETY_ENDPOINT`: Sheety API endpoint for Google Sheets integration.
-- `SHEETY_TOKEN`: Your Sheety API token.
+- `G_SPREADSHEET_LINK`: Your Google sheet's link.
+- `GENDER`: Your Stats.
+- `WEIGHT_KG`: Your Stats.
+- `HEIGHT_CM`: Your Stats.
+- `AGE`: Your Stats.
 
 ## Acknowledgments
 
@@ -59,8 +68,7 @@ If you encounter any issues or have suggestions, please [open an issue](https://
 ## Roadmap
 
 - [ ] Implement user authentication for enhanced security.
-- [ ] Add visualization features for exercise progress tracking.
-- [ ] Provide multi-language support for Natural Language Processing.
+- [ ] Add visualization features for exercise progress tracking using [pixela](https://pixe.la/).
 
 ## Authors
 

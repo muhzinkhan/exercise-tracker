@@ -69,6 +69,7 @@ If you encounter any issues or have suggestions, please [open an issue](https://
 
 - [ ] Implement user authentication for enhanced security.
 - [ ] Add visualization features for exercise progress tracking using [pixela](https://pixe.la/).
+- [ ] Introduce a new GUI for the app
 
 ## Authors
 
